@@ -68,10 +68,7 @@ class AIPlayer:
             "time": elapsed,
             "depth": self.max_depth,
         }
-
-    # ============================================================
     # HAM DANH GIA TRANG THAI
-    # ============================================================
     def evaluate(self, board: Board) -> int:
         """Diem duong tot cho AI, diem am tot cho nguoi choi."""
         if board.check_win(self.player):
@@ -131,10 +128,7 @@ class AIPlayer:
         if count == 1 and open_ends > 0:
             return 20
         return 0
-
-    # ============================================================
     # LEVEL 1: MINIMAX
-    # ============================================================
     def _minimax_root(self, board: Board) -> Tuple[int, Optional[Move]]:
         best_value = -INF
         best_move = None
@@ -177,9 +171,7 @@ class AIPlayer:
 
         return int(best_value)
 
-    # ============================================================
     # LEVEL 2: ALPHA-BETA PRUNING
-    # ============================================================
     def _alphabeta_root(self, board: Board) -> Tuple[int, Optional[Move]]:
         best_value = -INF
         best_move = None
@@ -239,9 +231,7 @@ class AIPlayer:
                 break
         return int(value)
 
-    # ============================================================
     # NANG CAO: ALPHA-BETA + MOVE ORDERING + CACHE
-    # ============================================================
     def _advanced_root(self, board: Board) -> Tuple[int, Optional[Move]]:
         tactical_move = self._find_immediate_tactical_move(board)
         if tactical_move is not None:
