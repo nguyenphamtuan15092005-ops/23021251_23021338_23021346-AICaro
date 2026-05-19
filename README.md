@@ -14,6 +14,7 @@ Tro choi Caro 9x9 giua nguoi choi va may. Dieu kien thang la 4 quan lien tiep th
 
 ```text
 CaroAI_Project/
+|-- game_data_results
 |-- source_code/
 |   |-- ai.py
 |   |-- benchmark.py
