@@ -1,4 +1,4 @@
-# CARO AI PROJECT
+ô# CARO AI PROJECT
 
 Tro choi Caro 9x9 giua nguoi choi va may. Dieu kien thang la 4 quan lien tiep theo hang ngang, hang doc hoac duong cheo, khong xet luat chan hai dau.
 
@@ -76,7 +76,7 @@ Lenh mac dinh chay console, khong mo man hinh, va chay ca 3 mode:
 - Advanced: 100 van
 - Tong cong: 300 van
 
-File nay chay self-play: X va O deu la search agent dung cung thuat toan, cung depth va cung ham danh gia.
+File nay chay self-play: X (Human) va O (agent) dung cung thuat toan trong code, cung depth va cung ham danh gia. Human da choi và tong hop voi model nay de tong hop duoc 300 van gon nhat luu vao data.
 
 - Depth 1, 2, 3, 4, 5
 - Moi depth: AI di truoc 10 van va Human di truoc 10 van
