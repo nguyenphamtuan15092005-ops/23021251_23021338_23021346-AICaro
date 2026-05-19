@@ -9,10 +9,6 @@ from ai import AIPlayer
 from game import AI, EMPTY, HUMAN, Board, Move
 
 pygame = None
-
-# ============================================================
-# CAU HINH THUC NGHIEM
-# ============================================================
 # 5 do sau * 2 kieu di truoc * 10 van = 100 van cho moi thuat toan.
 DEPTHS = [1, 2, 3, 4, 5]
 GAMES_PER_SIDE = 10
@@ -301,7 +297,6 @@ def write_report(raw_rows: List[Dict[str, object]], summary_rows: List[Dict[str,
         f"- Candidate cap khi thu nghiem: {DATA_MAX_CANDIDATES}.",
         f"- Gioi han so nuoc moi van: {MAX_MOVES_PER_GAME}.",
         "",
-        "Bang tom tat:",
     ]
 
     for row in summary_rows:
@@ -317,7 +312,6 @@ def write_report(raw_rows: List[Dict[str, object]], summary_rows: List[Dict[str,
     lines.extend(
         [
             "",
-            "Goi y viet bao cao:",
             "- Dung first_player_win_rate de nhan xet loi the cua ben di truoc.",
             "- Dung avg_nodes_per_move va avg_search_time_s de nhan xet chi phi tim kiem.",
             "- So sanh Minimax, Alpha-Beta va Advanced tai cung depth vi ca ba dung chung evaluate.",
@@ -384,7 +378,6 @@ def run_console(modes: List[str]) -> None:
 
 
 class DataGUI:
-    """GUI nho de chay batch game data va xuat CSV."""
 
     def __init__(self) -> None:
         global pygame
@@ -543,11 +536,6 @@ class DataGUI:
 
 
 if __name__ == "__main__":
-    # Mac dinh chay console de khong can mo man hinh.
-    # Vi du:
-    #   python gui_game_data.py
-    #   python gui_game_data.py alphabeta advanced
-    #   python gui_game_data.py --gui
     if "--gui" in sys.argv:
         DataGUI().run()
     else:
